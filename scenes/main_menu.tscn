@@ -1,9 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://cssn3xc08fyo4"]
 
-[ext_resource type="Texture2D" uid="uid://bg7vmr6o5shop" path="res://assets/backgrounds/server_0019.png" id="1_oa1go"]
+[ext_resource type="Script" uid="uid://lvrvaim5f8km" path="res://scripts/main_menu.gd" id="1_5pajh"]
 [ext_resource type="Texture2D" uid="uid://bshql0yh3vgac" path="res://assets/effects/layer_3.png" id="2_tbmy8"]
 [ext_resource type="Texture2D" uid="uid://evrwmsh8t6kf" path="res://assets/logo/logo_mainmenu.png" id="3_jk1qb"]
-[ext_resource type="Texture2D" uid="uid://c40ji2r8mwsd8" path="res://assets/logo/full_logo.png" id="4_5dd4i"]
 [ext_resource type="Texture2D" uid="uid://dvs0gvibl8eou" path="res://assets/ui/buttons/continue.png" id="5_j7ex8"]
 [ext_resource type="AudioStream" uid="uid://bvc3yf8a7kje4" path="res://assets/sfx/ui/click_2.wav" id="5_lgwnu"]
 [ext_resource type="Texture2D" uid="uid://4hws5sgpye1g" path="res://assets/ui/buttons/continue_on.png" id="6_a8gd2"]
@@ -17,28 +16,24 @@
 [ext_resource type="Texture2D" uid="uid://bhsi6gvmsyfew" path="res://assets/ui/buttons/about_on.png" id="12_qywvv"]
 [ext_resource type="Texture2D" uid="uid://kflg8uthrwlg" path="res://assets/ui/buttons/exit.png" id="13_3wgol"]
 [ext_resource type="Texture2D" uid="uid://cb84184vtsnx4" path="res://assets/ui/buttons/exit_on.png" id="14_1acrt"]
+[ext_resource type="AudioStream" uid="uid://cemh1dkpijbow" path="res://assets/music/main_menu.wav" id="17_j7ex8"]
 
-[node name="MainMenu" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5pajh")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Layer3" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_oa1go")
-
-[node name="Layer3" type="TextureRect" parent="Background"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("2_tbmy8")
 
-[node name="LogoMain" type="TextureRect" parent="Background"]
+[node name="LogoMain" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,62 +48,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_jk1qb")
 
-[node name="TextureRect" type="TextureRect" parent="Background"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -216.5
-offset_top = -330.5
-offset_right = 216.5
-offset_bottom = 330.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_5dd4i")
-
 [node name="Buttons" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="BtnContinue" type="TextureButton" parent="Buttons"]
-layout_mode = 0
-offset_left = 995.0
-offset_top = 580.0
-offset_right = 1362.0
-offset_bottom = 787.0
-texture_normal = ExtResource("5_j7ex8")
-texture_hover = ExtResource("6_a8gd2")
-
-[node name="BtnPlay" type="TextureButton" parent="Buttons"]
-layout_mode = 0
-offset_left = 690.0
-offset_top = 580.0
-offset_right = 924.0
-offset_bottom = 788.0
-texture_normal = ExtResource("7_hstxw")
-texture_hover = ExtResource("8_8egab")
-
-[node name="BtnSettings" type="TextureButton" parent="Buttons"]
-layout_mode = 0
-offset_left = 595.0
-offset_top = 579.0
-offset_right = 945.0
-offset_bottom = 851.0
-texture_normal = ExtResource("9_gw5y6")
-texture_hover = ExtResource("10_svtp6")
-
-[node name="BtnAbout" type="TextureButton" parent="Buttons"]
-layout_mode = 0
-offset_left = 974.0
-offset_top = 580.0
-offset_right = 1259.0
-offset_bottom = 851.0
-texture_normal = ExtResource("11_1dfpl")
-texture_hover = ExtResource("12_qywvv")
 
 [node name="BtnExit" type="TextureButton" parent="Buttons"]
 layout_mode = 0
@@ -119,11 +62,63 @@ offset_bottom = 931.0
 texture_normal = ExtResource("13_3wgol")
 texture_hover = ExtResource("14_1acrt")
 
-[node name="AudioHover" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_lgwnu")
+[node name="BtnAbout" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 974.0
+offset_top = 580.0
+offset_right = 1259.0
+offset_bottom = 851.0
+texture_normal = ExtResource("11_1dfpl")
+texture_hover = ExtResource("12_qywvv")
 
-[node name="AudioCLick" type="AudioStreamPlayer2D" parent="."]
+[node name="BtnSettings" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 579.0
+offset_right = 945.0
+offset_bottom = 851.0
+texture_normal = ExtResource("9_gw5y6")
+texture_hover = ExtResource("10_svtp6")
+
+[node name="BtnContinue" type="TextureButton" parent="Buttons"]
+z_index = 1
+layout_mode = 0
+offset_left = 995.0
+offset_top = 580.0
+offset_right = 1362.0
+offset_bottom = 787.0
+texture_normal = ExtResource("5_j7ex8")
+texture_hover = ExtResource("6_a8gd2")
+
+[node name="BtnPlay" type="TextureButton" parent="Buttons"]
+z_index = 1
+layout_mode = 0
+offset_left = 690.0
+offset_top = 580.0
+offset_right = 924.0
+offset_bottom = 788.0
+texture_normal = ExtResource("7_hstxw")
+texture_hover = ExtResource("8_8egab")
+
+[node name="AudioHardCkick" type="AudioStreamPlayer2D" parent="Buttons"]
+stream = ExtResource("7_rcqid")
+
+[node name="AudioCLick" type="AudioStreamPlayer2D" parent="Buttons"]
 stream = ExtResource("6_flqon")
 
-[node name="AudioHardCkick" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_rcqid")
+[node name="AudioHover" type="AudioStreamPlayer2D" parent="Buttons"]
+stream = ExtResource("5_lgwnu")
+
+[node name="MTheme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_j7ex8")
+
+[connection signal="mouse_entered" from="Buttons/BtnExit" to="Buttons/AudioHover" method="play"]
+[connection signal="pressed" from="Buttons/BtnExit" to="Buttons/AudioCLick" method="play"]
+[connection signal="mouse_entered" from="Buttons/BtnAbout" to="Buttons/AudioHover" method="play"]
+[connection signal="pressed" from="Buttons/BtnAbout" to="Buttons/AudioCLick" method="play"]
+[connection signal="mouse_entered" from="Buttons/BtnSettings" to="Buttons/AudioHover" method="play"]
+[connection signal="pressed" from="Buttons/BtnSettings" to="Buttons/AudioCLick" method="play"]
+[connection signal="mouse_entered" from="Buttons/BtnContinue" to="Buttons/AudioHover" method="play"]
+[connection signal="pressed" from="Buttons/BtnContinue" to="Buttons/AudioHardCkick" method="play"]
+[connection signal="mouse_entered" from="Buttons/BtnPlay" to="Buttons/AudioHover" method="play"]
+[connection signal="pressed" from="Buttons/BtnPlay" to="Buttons/AudioHardCkick" method="play"]

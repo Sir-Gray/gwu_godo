@@ -106,7 +106,14 @@ func animate_logo():
 	# FullLogo появляется и остаётся
 	$Logo/FullLogo.modulate.a = 0.0
 	var t_logo := create_tween()
-	t_logo.tween_property($Logo/FullLogo, "modulate:a", 1.0, 1.0).from(0.0)
+	t_logo.tween_property($Logo/FullLogo, "modulate:a", 1.0, 3.0).from(0.0)
+	
+		# Ждём появления логотипа и паузу перед исчезновением
+	await get_tree().create_timer(8.0).timeout
+
+	# FullLogo исчезает
+	var t_hide := create_tween()
+	t_hide.tween_property($Logo/FullLogo, "modulate:a", 0.0, 2.0)
 
 func _go_to_main_menu():
 	var menu_scene = preload("res://scenes/main_menu.tscn")
