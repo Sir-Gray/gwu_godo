@@ -1,0 +1,112 @@
+[gd_scene load_steps=20 format=3 uid="uid://cdgn0ld25cklr"]
+
+[ext_resource type="Texture2D" uid="uid://dsf4yktirlofj" path="res://assets/lamps/server_0000.png" id="1_liy2t"]
+[ext_resource type="Texture2D" uid="uid://cipasofi8obvg" path="res://assets/lamps/server_0001.png" id="2_ukkb5"]
+[ext_resource type="Texture2D" uid="uid://ge6wpte6wp4d" path="res://assets/lamps/server_0002.png" id="3_055m2"]
+[ext_resource type="Texture2D" uid="uid://dsyyuu4le3h0k" path="res://assets/lamps/server_0003.png" id="4_lee5l"]
+[ext_resource type="Texture2D" uid="uid://bqm2n2idt7m2g" path="res://assets/lamps/server_0004.png" id="5_0rfp5"]
+[ext_resource type="Texture2D" uid="uid://b81wm5dfpblqw" path="res://assets/lamps/server_0005.png" id="6_2usgf"]
+[ext_resource type="Texture2D" uid="uid://di7cl8y4405np" path="res://assets/lamps/server_0006.png" id="7_3uiqh"]
+[ext_resource type="Texture2D" uid="uid://c4cqttknt6m8q" path="res://assets/lamps/server_0007.png" id="8_ommgb"]
+[ext_resource type="Texture2D" uid="uid://i07ymhwb4fik" path="res://assets/lamps/server_0008.png" id="9_faaoe"]
+[ext_resource type="Texture2D" uid="uid://dpiy505ot1j8c" path="res://assets/lamps/server_0009.png" id="10_j2dyf"]
+[ext_resource type="Texture2D" uid="uid://cycu3wqjcd12w" path="res://assets/lamps/server_0010.png" id="11_yk4c8"]
+[ext_resource type="Texture2D" uid="uid://ca2gmho3iu40d" path="res://assets/lamps/server_0011.png" id="12_o4f25"]
+[ext_resource type="Texture2D" uid="uid://6tjhk15dwfgn" path="res://assets/lamps/server_0012.png" id="13_lo6aa"]
+[ext_resource type="Texture2D" uid="uid://4p116s034d2o" path="res://assets/lamps/server_0013.png" id="14_53ckj"]
+[ext_resource type="Texture2D" uid="uid://dl7iy8185qeus" path="res://assets/lamps/server_0014.png" id="15_3sknb"]
+[ext_resource type="Texture2D" uid="uid://cweeg6h63de6h" path="res://assets/lamps/server_0015.png" id="16_68qyb"]
+[ext_resource type="Texture2D" uid="uid://clsy07kwnr4g2" path="res://assets/lamps/server_0016.png" id="17_gyf6e"]
+[ext_resource type="Texture2D" uid="uid://b2n62jaenrptd" path="res://assets/lamps/server_0017.png" id="18_dor3b"]
+[ext_resource type="Texture2D" uid="uid://cgyugx7y0t2ca" path="res://assets/lamps/server_0018.png" id="19_gpfo3"]
+
+[node name="Lamps" type="Node2D"]
+
+[node name="0000" type="Sprite2D" parent="."]
+position = Vector2(119, 306)
+rotation = 0.174533
+skew = -0.20944
+texture = ExtResource("1_liy2t")
+
+[node name="0001" type="Sprite2D" parent="."]
+position = Vector2(552, 624)
+texture = ExtResource("2_ukkb5")
+
+[node name="0002" type="Sprite2D" parent="."]
+position = Vector2(337, 864)
+rotation = -0.23911
+skew = 0.268781
+texture = ExtResource("3_055m2")
+
+[node name="0003" type="Sprite2D" parent="."]
+position = Vector2(460, 439)
+texture = ExtResource("4_lee5l")
+
+[node name="0004" type="Sprite2D" parent="."]
+position = Vector2(1610, 1017)
+texture = ExtResource("5_0rfp5")
+
+[node name="0005" type="Sprite2D" parent="."]
+position = Vector2(91, 870)
+texture = ExtResource("6_2usgf")
+
+[node name="0006" type="Sprite2D" parent="."]
+position = Vector2(1328, 403)
+rotation = -3.14159
+texture = ExtResource("7_3uiqh")
+
+[node name="0007" type="Sprite2D" parent="."]
+position = Vector2(317, 573)
+rotation = 0.174533
+skew = -0.20944
+texture = ExtResource("8_ommgb")
+
+[node name="0008" type="Sprite2D" parent="."]
+position = Vector2(1411, 857)
+texture = ExtResource("9_faaoe")
+
+[node name="0009" type="Sprite2D" parent="."]
+position = Vector2(1722, 912)
+texture = ExtResource("10_j2dyf")
+
+[node name="0010" type="Sprite2D" parent="."]
+position = Vector2(1213, 601)
+rotation = -0.0872665
+skew = 0.150098
+texture = ExtResource("11_yk4c8")
+
+[node name="0011" type="Sprite2D" parent="."]
+position = Vector2(1651, 505)
+texture = ExtResource("12_o4f25")
+
+[node name="0012" type="Sprite2D" parent="."]
+position = Vector2(1055, 720)
+texture = ExtResource("13_lo6aa")
+
+[node name="0013" type="Sprite2D" parent="."]
+position = Vector2(799, 636)
+texture = ExtResource("14_53ckj")
+
+[node name="0014" type="Sprite2D" parent="."]
+position = Vector2(1815, 649)
+rotation = 0.23911
+skew = -0.20944
+texture = ExtResource("15_3sknb")
+
+[node name="0015" type="Sprite2D" parent="."]
+position = Vector2(1663, 406)
+texture = ExtResource("16_68qyb")
+
+[node name="0016" type="Sprite2D" parent="."]
+position = Vector2(697, 484)
+texture = ExtResource("17_gyf6e")
+
+[node name="0017" type="Sprite2D" parent="."]
+position = Vector2(1417, 689)
+texture = ExtResource("18_dor3b")
+
+[node name="0018" type="Sprite2D" parent="."]
+position = Vector2(453, 674)
+texture = ExtResource("19_gpfo3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

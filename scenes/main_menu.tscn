@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://cssn3xc08fyo4"]
+
+[ext_resource type="Texture2D" uid="uid://bg7vmr6o5shop" path="res://assets/backgrounds/server_0019.png" id="1_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bshql0yh3vgac" path="res://assets/effects/layer_3.png" id="2_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://evrwmsh8t6kf" path="res://assets/logo/logo_mainmenu.png" id="3_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://c40ji2r8mwsd8" path="res://assets/logo/full_logo.png" id="4_5dd4i"]
+[ext_resource type="AudioStream" uid="uid://bvc3yf8a7kje4" path="res://assets/sfx/ui/click_2.wav" id="5_lgwnu"]
+[ext_resource type="AudioStream" uid="uid://w284k7wj0dh" path="res://assets/sfx/ui/misc_menu_4.wav" id="6_flqon"]
+[ext_resource type="AudioStream" uid="uid://dwww11i3mg5en" path="res://assets/sfx/ui/start_button.wav" id="7_rcqid"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_oa1go")
+
+[node name="Layer3" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_tbmy8")
+
+[node name="LogoMain" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -330.0
+offset_right = 216.5
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jk1qb")
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -330.5
+offset_right = 216.5
+offset_bottom = 330.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5dd4i")
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BtnContinue" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BtnPlay" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BtnSettings" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BtnAbout" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BtnExit" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioHover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_lgwnu")
+
+[node name="AudioCLick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_flqon")
+
+[node name="AudioHardCkick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_rcqid")

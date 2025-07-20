@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnaseus83tm8l"]
+
+[ext_resource type="Script" uid="uid://cmwwovdvg1oa3" path="res://scripts/splash.gd" id="1_651hb"]
+[ext_resource type="AudioStream" uid="uid://cdk68usefa32m" path="res://assets/sfx/ambient/pc_on.wav" id="2_x1bu2"]
+[ext_resource type="Texture2D" uid="uid://bg7vmr6o5shop" path="res://assets/backgrounds/server_0019.png" id="3_440nw"]
+[ext_resource type="PackedScene" uid="uid://cdgn0ld25cklr" path="res://scenes/lamps.tscn" id="4_3idxy"]
+[ext_resource type="Texture2D" uid="uid://b410eiocc4p7k" path="res://assets/effects/layer_1.png" id="5_arxou"]
+[ext_resource type="Texture2D" uid="uid://dw811egypuf58" path="res://assets/effects/layer_2.png" id="6_tdut7"]
+[ext_resource type="Texture2D" uid="uid://bshql0yh3vgac" path="res://assets/effects/layer_3.png" id="7_pqg0r"]
+[ext_resource type="Texture2D" uid="uid://c40ji2r8mwsd8" path="res://assets/logo/full_logo.png" id="8_d1bx2"]
+
+[sub_resource type="Environment" id="Environment_3vyj7"]
+glow_enabled = true
+glow_intensity = 1.2
+glow_bloom = 1.0
+glow_hdr_threshold = 0.9
+glow_hdr_scale = 1.0
+glow_hdr_luminance_cap = 0.0
+
+[node name="Splash" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_651hb")
+
+[node name="PCon" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_x1bu2")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_440nw")
+
+[node name="Lamps" parent="." instance=ExtResource("4_3idxy")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Logo" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Flash1_L1" type="TextureRect" parent="Logo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 723.5
+offset_top = 189.5
+offset_right = 1156.5
+offset_bottom = 850.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_arxou")
+
+[node name="Flash1_L2" type="TextureRect" parent="Logo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 723.5
+offset_top = 189.5
+offset_right = 1156.5
+offset_bottom = 850.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_tdut7")
+
+[node name="Layer3" type="TextureRect" parent="Logo"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 723.5
+offset_top = 189.5
+offset_right = 1156.5
+offset_bottom = 850.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_pqg0r")
+
+[node name="FullLogo" type="TextureRect" parent="Logo"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 723.5
+offset_top = 189.5
+offset_right = 1156.5
+offset_bottom = 850.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_d1bx2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3vyj7")
